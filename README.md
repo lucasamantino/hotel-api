@@ -85,7 +85,7 @@ It is an API for managing hotels, rooms, and reservations. It provides endpoints
 2. Import the [Bruno Collection](./Bruno%20collection.json):
     - Click **Import** in Bruno and select the JSON file.
    
-3Explore all endpoints.
+3. Explore all endpoints.
 
 ## API Endpoints
 
