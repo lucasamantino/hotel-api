@@ -1,0 +1,469 @@
+{
+  "name": "Hotel Ease API",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Cancel reserve",
+      "seq": 13,
+      "request": {
+        "url": "http://localhost:8080/reservations/1",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "CheckIn",
+      "seq": 14,
+      "request": {
+        "url": "http://localhost:8080/checkin/3",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "CheckOut",
+      "seq": 15,
+      "request": {
+        "url": "http://localhost:8080/checkout/1",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Create new reserve",
+      "seq": 10,
+      "request": {
+        "url": "http://localhost:8080/reservations",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"userEmail\": \"cliente@exemplo.com\",\n  \"roomNumber\": 1,\n  \"checkIn\": \"2024-12-26T12:00\",\n  \"days\": 2\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Create new room",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:8080/rooms",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"number\" : 1,\n  \"price\" : 2499.99,\n  \"roomType\" : \"DELUXE\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Delete room",
+      "seq": 6,
+      "request": {
+        "url": "http://localhost:8080/rooms/1",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "List all rooms",
+      "seq": 7,
+      "request": {
+        "url": "http://localhost:8080/rooms/all",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "List free rooms",
+      "seq": 8,
+      "request": {
+        "url": "http://localhost:8080/rooms/free",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "List rooms by type",
+      "seq": 9,
+      "request": {
+        "url": "http://localhost:8080/rooms/search?type=MASTER",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "type",
+            "value": "MASTER",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Login",
+      "seq": 1,
+      "request": {
+        "url": "http://localhost:8080/auth/login",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n    \"password\" : \"123\",\n    \"email\" : \"ADM@root.com\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {
+          "res": [
+            {
+              "name": "accessToken",
+              "value": "res.body.accessToken",
+              "enabled": true,
+              "local": false
+            }
+          ]
+        },
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Register",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:8080/auth/register",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n    \"name\" : \"client\",\n    \"password\" : \"1234\",\n    \"email\" : \"cliente@exemplo.com\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {
+          "res": [
+            {
+              "name": "accessToken",
+              "value": "res.body.accessToken",
+              "enabled": true,
+              "local": false
+            }
+          ]
+        },
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Reserve details",
+      "seq": 12,
+      "request": {
+        "url": "http://localhost:8080/reservations/1",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Update reserve",
+      "seq": 11,
+      "request": {
+        "url": "http://localhost:8080/reservations/1",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"userEmail\": \"cliente@exemplo.com\",\n  \"roomNumber\": 1,\n  \"checkIn\": \"2022-12-26T12:00\",\n  \"days\": 2,\n  \"status\" : \"PENDING\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Update room",
+      "seq": 5,
+      "request": {
+        "url": "http://localhost:8080/rooms/2",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"number\" : 1,\n  \"price\" : 149.99,\n  \"roomType\" : \"STANDARD\",\n  \"status\" : \"BUSY\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Update user roles",
+      "seq": 3,
+      "request": {
+        "url": "http://localhost:8080/user",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"email\" : \"cliente@exemplo.com\",\n  \"roles\" : [\"BASIC\",\"RECEPTIONIST\"]\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "Hotel Ease API",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.0032978057861328125,
+    "filesCount": 15
+  }
+}
