@@ -30,7 +30,7 @@ It is an API for managing hotels, rooms, and reservations. It provides endpoints
 1. Clone the repository.
 
 ```bash
- git clone https://github.com/lucasamantino/Hotel-API
+ git clone https://github.com/lucasamantino/Hotel-API.git
 ```
 
 2. Install dependencies with Maven.
